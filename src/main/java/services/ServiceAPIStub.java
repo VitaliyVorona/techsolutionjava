@@ -17,7 +17,7 @@ public class ServiceAPIStub {
                     .willReturn(WireMock.aResponse()
                             .withHeader("Content-Type", "application/json")
                             .withStatus(201)
-                            .withBody("{\n \"id\" : $customer.id \n, \"status\" : \"successfully created\"}")));
+                            .withBody("{\n \"id\" : " +customer.getId()+ "\n, \"status\" : \"successfully created\"}")));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
