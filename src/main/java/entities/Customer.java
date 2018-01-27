@@ -3,11 +3,11 @@ package entities;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Customer {
+public class Customer extends User {
 
-    private String id;
-    private String first_name;
-    private String last_name;
+    private String id = "1179";
+    private String first_name = "Elon";
+    private String last_name = "Musk";
     static private Properties properties = new Properties();
 
     public Customer setId(String id) {
@@ -45,9 +45,14 @@ public class Customer {
         Customer.properties = properties;
     }
 
-    public static String getCustomerJSONString(Customer customer) throws JsonProcessingException {
+    public static String getCustomerJSONString(Customer customer) {
         ObjectMapper mapper = new ObjectMapper();
-        String pojoJSON = mapper.writeValueAsString(customer);
+        String pojoJSON = null;
+        try {
+            pojoJSON = mapper.writeValueAsString(customer);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return pojoJSON;
     }
 }

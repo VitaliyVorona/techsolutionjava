@@ -2,9 +2,9 @@ package entities;
 
 public class Properties {
 
-    private String age;
-    private String date_of_birth;
-    private String active;
+    private String age = "43";
+    private String date_of_birth = "290671";
+    private String active = "true";
 
     public String getAge() {
         return age;
