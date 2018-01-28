@@ -6,8 +6,8 @@ import interfaces.Post;
 
 public class CommonSteps {
 
-    public Get get;
-    public Post post;
+    private Get get;
+    private Post post;
 
     public Response makePostRequest(String endpoint, String body) {
         return post.post(endpoint, body);

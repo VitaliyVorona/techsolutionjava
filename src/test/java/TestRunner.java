@@ -7,7 +7,7 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources",
+        features = "src/test/resources/features",
         glue = "classpath:steps",
         format = {"pretty", "html:target/cucumber"}
 )

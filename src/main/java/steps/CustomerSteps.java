@@ -101,7 +101,7 @@ public class CustomerSteps extends CommonSteps{
 
     @Then("^I should get (\\d+) response status code$")
     public void i_should_get_response_status_code(int expectedStatusCode) {
-        assertEquals("Expected status code " +expectedStatusCode+ " didn't match ", expectedStatusCode, response.getStatusCode());
+        assertEquals("Expected status code " +expectedStatusCode+ " didn't match with ", expectedStatusCode, response.getStatusCode());
     }
 
     @Then("^correct full Customer information$")
