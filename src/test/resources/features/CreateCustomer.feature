@@ -19,8 +19,8 @@ Feature: Create a Customer
     Examples:
           | first_name  | last_name  |  id  | age |	dob		| active |
           | Elon    	| Musk  	 |  	| 46  | 280671  | true 	 |
-          |         	| musk   	 |  671 | 46  |	280671	| true 	 |
-          | elon    	|          	 |	671 | 46  |	280671	| true 	 |
+          |         	| Musk   	 |  671 | 46  |	280671	| true 	 |
+          | Elon    	|          	 |	671 | 46  |	280671	| true 	 |
           |         	|          	 |		| 46  |	280671	| true 	 |
           | 123elon 	| Musk  	 |  671	| 46  | 280671  | true 	 |
           | Elon    	| musk123	 |  671	| 46  | 280671  | true 	 |
