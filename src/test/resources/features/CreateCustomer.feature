@@ -23,5 +23,5 @@ Feature: Create a Customer
           | elon    	|          	 |	671 | 46  |	280671	| true 	 |
           |         	|          	 |		| 46  |	280671	| true 	 |
           | 123elon 	| Musk  	 |  671	| 46  | 280671  | true 	 |
-          | elon    	| musk123	 |  671	| 46  | 280671  | true 	 |
-          | elon    	| musk  	 |  67AB| 46  | 280671  | true 	 |
+          | Elon    	| musk123	 |  671	| 46  | 280671  | true 	 |
+          | Elon    	| Musk  	 |  67AB| 46  | 280671  | true 	 |
