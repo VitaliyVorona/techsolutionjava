@@ -2,11 +2,12 @@ package services;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
 import entities.Customer;
+import utilities.Utilities;
 
 public class ServiceAPIStub {
 
-    public final static String BASE_URL = "http://localhost:8089";
-    public final static String CUSTOMER_ENDPOINT = "/rest/api/customer";
+    public final static String BASE_URL = Utilities.config.getProperty("BASE_URL");
+    public final static String CUSTOMER_ENDPOINT = Utilities.config.getProperty("CUSTOMER_END_POINT");
 
 
     public static void makePostCustomerStub(Customer customer) {

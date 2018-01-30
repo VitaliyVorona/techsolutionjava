@@ -6,5 +6,5 @@ import entities.Properties;
 public class CustomerProperties {
 
     public Customer customer;
-    public Properties properties;
+    public Properties customer_properties;
 }

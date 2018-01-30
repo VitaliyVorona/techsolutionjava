@@ -5,32 +5,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Customer extends User {
 
-    private String id = "1179";
-    private String first_name = "Elon";
-    private String last_name = "Musk";
-    static private Properties properties = new Properties();
+    private String id;
+    private String first_name;
+    private String last_name;
 
-    public Customer setId(String id) {
-        this.id = id;
-        return this;
-    }
+    private Properties customer_properties;
 
     public String getId() {
-        return id;
-    }
 
-    public Customer setFirstName(String first_name) {
-        this.first_name = first_name;
-        return this;
+        return id;
     }
 
     public String getFirst_name() {
         return first_name;
-    }
-
-    public Customer setLastName(String last_name) {
-        this.last_name = last_name;
-        return this;
     }
 
     public String getLast_name() {
@@ -38,14 +25,50 @@ public class Customer extends User {
     }
 
     public Properties getProperties() {
-        return properties;
+        return customer_properties;
     }
 
-    public void setProperties(Properties properties) {
-        Customer.properties = properties;
+
+    public static class Builder {
+        private String id = "1179";
+        private String first_name = "Elon";
+        private String last_name = "Musk";
+        private Properties properties;
+
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder first_name(String first_name) {
+            this.first_name = first_name;
+            return this;
+        }
+
+        public Builder last_name(String last_name) {
+            this.last_name = last_name;
+            return this;
+        }
+
+        public Builder customer_properties(Properties properties) {
+            this.properties = properties;
+            return this;
+        }
+
+        public Customer build() {
+            return new Customer(this);
+        }
+
     }
 
-    public static String getCustomerJSONString(Customer customer) {
+    private Customer(Builder builder) {
+        id = builder.id;
+        first_name = builder.first_name;
+        last_name = builder.last_name;
+        customer_properties = builder.properties;
+    }
+
+    public static String getCustomerJSONString(Object customer) {
         ObjectMapper mapper = new ObjectMapper();
         String pojoJSON = null;
         try {
