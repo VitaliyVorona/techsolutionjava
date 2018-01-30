@@ -5,7 +5,7 @@ Feature: Create a Customer
 
   Scenario: Create a new Customer
     Given the positive Create a new Customer scenario
-    When I provide all Customers mandatory fields with id "0171" First Name "Elon" and Last Name "Musk"
+    When I provide all Customers mandatory fields with id "671" First Name "Elon" and Last Name "Musk"
     And I make POST request to the target endpoint
     Then I should get 201 response status code
     And successfully created response message
@@ -18,10 +18,10 @@ Feature: Create a Customer
     And "Bad Request" response message
     Examples:
           | first_name  | last_name  |  id  | age |	dob		| active |
-          | elon    	| musk  	 |  	| 46  | 280671  | true 	 |
-          |         	| musk   	 |  0671| 46  |	280671	| true 	 |
-          | elon    	|          	 |	0671| 46  |	280671	| true 	 |
+          | Elon    	| Musk  	 |  	| 46  | 280671  | true 	 |
+          |         	| musk   	 |  671 | 46  |	280671	| true 	 |
+          | elon    	|          	 |	671 | 46  |	280671	| true 	 |
           |         	|          	 |		| 46  |	280671	| true 	 |
           | 123elon 	| musk  	 |  	| 46  | 280671  | true 	 |
           | elon    	| musk123	 |  	| 46  | 280671  | true 	 |
-          | elon    	| musk  	 |  0671| 46  | 280671  | true 	 |
+          | elon    	| musk  	 |  67AB| 46  | 280671  | true 	 |
