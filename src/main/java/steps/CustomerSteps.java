@@ -76,13 +76,13 @@ public class CustomerSteps extends CommonSteps {
         ServiceAPIStub.makePostCustomerStubNegative(world.customer);
     }
 
-    @When("^I make a POST request to the target endpoint$")
-    public void make_a_POST_request_to_the_target_endpoint() throws Throwable {
+    @When("^I make POST request to the target endpoint$")
+    public void make_POST_request_to_the_target_endpoint() throws Throwable {
         response = commonSteps.makePostRequest(ServiceAPIStub.BASE_URL + ServiceAPIStub.CUSTOMER_ENDPOINT, Customer.getCustomerJSONString(world.customer));
     }
 
     @When("^I make a Get request to the system with an existing id$")
-    public void make_a_Get_request_to_the_system_with_an_existing_id() throws Throwable {
+    public void make_Get_request_to_the_system_with_an_existing_id() throws Throwable {
         world.customer = new Customer.Builder().
                 build();
         ServiceAPIStub.makeGetCustomerStub(world.customer);
